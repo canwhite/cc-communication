@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    // target属性用于指定编译后JavaScript的目标版本，比如 "es5"、"es6"（也叫"es2015"）、"es2022"等。
+    "target": "es2022",
+    // module属性用于指定生成的模块系统类型，比如 "commonjs"、"esnext" 等。
+    "module": "esnext",
+    // 控制TypeScript如何解析和查找import的模块路径。
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "outDir": "dist",
+    "rootDir": "src",
+    // declaration 用于控制是否生成 .d.ts 类型声明文件，方便其它项目引用类型。
+    "declaration": true,
+    // sourceMap用于控制是否为编译后的JavaScript生成source map文件，方便调试时将编译后的代码映射回TypeScript源码。
+    "sourceMap": true,
+    // Best practices
+    "strict": true,
+    // esModuleInterop: 让你可以用 import 默认方式导入CommonJS的模块，兼容性更好。
+    // skipLibCheck: 不检查依赖库的类型错误，减少报错，编译更快一些。
+    // resolveJsonModule: 允许你直接 import 引入 .json 文件，并且能自动补全类型。
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "types": ["node"]
+  }
+}
