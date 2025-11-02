@@ -1,5 +1,7 @@
 {
-  "name": "cc-communication",
+  "name": "@iamqc/cc-communication",
+  "version": "1.0.0",
+  "description": "WebSocket integration tools for cc-session and cc-json-parser",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "type": "module",
@@ -13,16 +15,38 @@
   },
   "files": [
     "dist",
+    "src",
     "README.md",
     "LICENSE"
   ],
-  "devDependencies": {
-    "@types/bun": "latest"
-  },
   "scripts": {
-    "build": "tsc -p tsconfig.json"
+    "build": "tsc -p tsconfig.json",
+    "dev": "bun --hot src/test/usage-example.ts",
+    "example": "bun src/test/usage-example.ts",
+    "test": "echo \"No tests yet\"",
+    "prepublishOnly": "bun run build"
+  },
+  "keywords": [
+    "websocket",
+    "cc-session",
+    "cc-json-parser",
+    "claude",
+    "communication",
+    "real-time"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/bun": "^1.3.1"
   },
   "peerDependencies": {
     "typescript": "^5"
+  },
+  "optionalDependencies": {
+    "@iamqc/cc-session": "*",
+    "@iamqc/cc-json-parser": "*"
+  },
+  "engines": {
+    "bun": ">=1.0.0"
   }
 }
